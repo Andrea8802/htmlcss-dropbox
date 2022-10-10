@@ -188,8 +188,34 @@ main{
 }
 
 .partner > div{
+    float: right;
     /* DEBUG */
     background-color: purple;
     width: 50%;
     height: 100%;
+}
+
+.strumenti{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* DEBUG */
+    background-color: red;
+    width: 100%;
+    height: 650px;
+}
+
+.card{
+    /* DEBUG */
+    background-color: blue;
+    height: 300px;
+    flex-basis: calc(100% / 3 - 10px)
+}
+
+.client{
+    /* DEBUG */
+    background-color: blueviolet;
+    width: 100%;
+    height: 150px;
 }
