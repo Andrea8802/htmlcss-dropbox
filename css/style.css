@@ -24,6 +24,7 @@ body{
     color:white;
     padding: 5px 15px;
     display: inline-block;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -177,10 +178,84 @@ header li > span > a{
 }
 
 .column{
+    border: 1px solid lightgray;
     /* DEBUG */
-    background-color: blueviolet;
     height: 100%;
     width: 100%;
+}
+
+.col-head{
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    padding: 5px 0;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.col-body{
+    padding: 20px 20px 50px;
+}
+
+.type{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.price{
+    font-size: 11px;
+    font-weight: 700;
+    padding-top: 15px;
+}
+
+.period{
+    font-size: 12px;
+    font-weight: lighter;
+    padding-top: 10px;
+}
+
+.features{
+    font-size: 12px;
+    padding-top: 40px;
+    font-weight: 300;
+}
+
+.features > div{
+    padding: 10px 0;
+}
+
+.col-body .btn-blue{
+    margin-top: 40px;
+    font-weight: 400;
+    padding: 10px 30px;
+    font-size: 11px;
+}
+
+.buy > a{
+    color: #1a1ae1;
+    padding-top: 20px;
+    display: inline-block;
+}
+
+.buy > span{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 50px;
+}
+
+.highlights{
+    margin-top: 70px;
+}
+
+.highlights > h4{
+    margin-bottom: 20px;
+}
+
+.highlights > ul > li{
+    list-style: none;
+    padding: 0 0 15px;
+}
+
+.highlights > ul > li > i{
+    color: blue;
 }
 
 .plan-enterprise{
