@@ -10,29 +10,27 @@ body{
 }
 
 .container{
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
 }
 
 .btn-blue{
     background-color: #0061ff;
     color:white;
-    padding: 5px 10px;
-    /* DEBUG */
+    padding: 5px 15px;
     display: inline-block;
+    cursor: pointer;
 }
 
 /* Header Rules */
 header{
-    height: 100vh;
-    max-width: 1400px;
-    /* DEBUG */
-    background-color: red;
+    min-height: 93vh;
+    background-color: #b4d0e7;
 }
 
 nav{
     width: 100%;
-    height: 70px;
+    height: 65px;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
@@ -42,7 +40,8 @@ nav{
     right: 0px;
     left: 0px;
     background-color: white;
-    font-size: 14px;
+    font-size: 15px;
+    z-index: 500;
 }
 
 header ul{
@@ -71,71 +70,59 @@ header li > span > a{
 
 /* Jumbotron Rules */
 .jumbotron{
-    padding-top: 70px;
+    padding-top: 65px;
     height: 100%;
-    /* DEBUG */
-    background-color: cadetblue;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .jumbotron > h2{
-    margin-top: 70px;
-    text-align: center;
-    /* DEBUG */
-    background-color: aqua;
-    height: 50px;
+    margin: 60px 0 30px 0;
+    font-size: 60px;
 }
 
 .jum-content{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
-.jum-content > aside{
-    width: 50%;
-    /* DEBUG */
-    background-color: aliceblue;
+#jum-left{
+    width: 30%;
+    font-size: 12px;
+    line-height: 150%;
 }
 
-.jum-content > #jum-left >  p{
-    /* DEBUG */
-    background-color: brown;
-    width: 100%;
-    height: 90px;
+#jum-left > .btn-blue{
+    margin: 20px 0;
+    padding: 10px 15px;
+    font-size: 13px;
 }
 
-.jum-content > #jum-left > .button-blue{
-    /* DEBUG */
-    width: 100%;
-    height: 90px;
-    background-color: blue;
+#jum-left > .arrow{
+    font-size: 40px;
+    margin-top: 30%;
+    display: inline-block
 }
 
-.jum-content > #jum-left > div{
-    /* DEBUG */
-    background-color: black;
-    width: 100%;
-    height: 90px;
-}
-
-.jum-content > #jum-left a{
-    /* DEBUG */
-    background-color: chartreuse;
-    width: 100%;
-    height: 100px;
-    display: block;
+#jum-right{
+    width: 70%;
+    height: 100%;
+    position: relative;
 }
 
 .jum-content > #jum-right > img{
-    /* DEBUG */
-    background-color: royalblue;
-    height: 100%;
-    width: 100%;
+    max-width: 110%;
+    min-width: 110%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
 }
 
 /* Main Rules */
-main{
-    max-width: 1400px;
-}
 
 /* Plan Section Rules */
 .plan{
