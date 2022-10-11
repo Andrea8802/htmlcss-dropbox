@@ -29,9 +29,23 @@ body{
     text-align: center;
 }
 
+.partner .btn-white{
+    border: 1px solid black;
+    padding: 8px 10px;
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+}
+
 .title-section{
     font-size: 30px;
     font-weight: 700;
+}
+
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Header Rules */
@@ -312,27 +326,27 @@ header li > span > a{
 
 /* Partner Section Rules */
 .partner{
-    /* DEBUG */
-    background-color: aqua;
-    height: 800px;
-
+    width: 100%;
+    margin-bottom: 120px;
 }
 
 .partner > img{
     float: left;
-    /* DEBUG */
-    background-color: darkgreen;
-    width: 50%;
-    height: 100%;
+    width: 60%;
 }
 
 .partner > div{
-    float: right;
-    /* DEBUG */
-    background-color: purple;
-    width: 50%;
-    height: 100%;
+    float: left;
+    width: 30%;
+    margin: 35px 0 0 30px;
+
 }
+
+.partner > div > p{
+    padding: 15px 0 30px;
+    font-size: 13px;
+}
+
 
 /* Tool Rules */
 .tool{
@@ -340,6 +354,7 @@ header li > span > a{
     justify-content: space-evenly;
     gap: 10px;
     flex-wrap: wrap;
+
     /* DEBUG */
     background-color: red;
     width: 100%;
