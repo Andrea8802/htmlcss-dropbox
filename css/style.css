@@ -37,7 +37,7 @@ body{
     color: black;
 }
 
-.title-section{
+.section-title{
     font-size: 30px;
     font-weight: 700;
 }
@@ -150,6 +150,11 @@ header li > span > a{
 }
 
 /* Main Rules */
+
+main{
+    max-width: 1500px;
+    margin: 0 auto;
+}
 
 /* Plan Section Rules */
 .plan{
@@ -350,24 +355,32 @@ header li > span > a{
 
 /* Tool Rules */
 .tool{
+    width: 100%;
+}
+
+.row{
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
     flex-wrap: wrap;
-
-    /* DEBUG */
-    background-color: red;
-    width: 100%;
-    height: 650px;
 }
 
 .card{
-    /* DEBUG */
-    background-color: blue;
-    height: 300px;
-    flex-basis: calc(100% / 3 - 10px)
+    width: 250px;
+    margin-bottom: 10px;
 }
 
+.card > img{
+    width: 100%;
+}
+
+.card > p{
+    font-size: 13px;
+    margin-top: 20px;
+    font-weight: lighter;
+}
+
+/* Client Rules */
 .client{
     /* DEBUG */
     background-color: blueviolet;
