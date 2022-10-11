@@ -477,6 +477,7 @@ main{
     height: 100%;
     font-size: 14px;
     font-weight: lighter;
+    overflow-y: scroll;
 }
 
 .comp-center  img{
@@ -551,27 +552,60 @@ main{
     font-weight: bold;
 }
 
+/* Footer Rules */
 footer{
     background-color: black;
-    height: 400px;
+    height: 450px;
     width: 100%;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
 }
 
 .footer-top{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    /* DEBUG */
-    background-color: chocolate;
-    height: 70%;
+    gap: 50px;
+    height: 80%;
 }
 
 .footer-top > div > ul{
     list-style: none;
 }
 
+.title > a{
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.footer-top li{
+    line-height: 200%;
+    font-size: 14px;
+}
+
+
 .footer-bottom{
-    /* DEBUG */
-    background-color: aqua;
-    height: 30%;
+    height: 20%;
+}
+
+.language{
+    width: 10%;
+    color: grey;
+    font-size: 14px;
+    padding-top: 40px;
+    border-top: 1px solid white;
+}
+
+.language > span{
+    margin: 0 1px 0 5px; 
+    display: inline-block;
+}
+
+.language > i{
+    font-size: 12px;
 }
