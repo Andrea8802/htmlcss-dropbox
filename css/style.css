@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -35,6 +36,7 @@ body{
     font-size: 13px;
     text-decoration: none;
     color: black;
+    background-color: white;
 }
 
 .section-title{
@@ -98,7 +100,7 @@ header li > span > a{
 .jumbotron{
     padding-top: 65px;
     height: 100%;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -131,7 +133,7 @@ header li > span > a{
 #jum-left > .arrow{
     font-size: 40px;
     margin-top: 30%;
-    display: inline-block
+    display: inline-block;
 }
 
 #jum-right{
@@ -152,7 +154,7 @@ header li > span > a{
 /* Main Rules */
 
 main{
-    max-width: 1500px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -196,11 +198,11 @@ main{
     justify-content: space-evenly;
     gap: 30px;
     margin-bottom: 40px;
+    width: 100%;
 }
 
 .column{
     border: 1px solid lightgray;
-    flex-basis: 100%;
 }
 
 .col-head{
@@ -248,8 +250,8 @@ main{
     display: flex;
     justify-content: flex-start;
     gap: 3px;
+    font-size: 13px;
 }
-
 .col-body .btn-blue{
     margin-top: 40px;
     font-weight: 400;
@@ -259,7 +261,7 @@ main{
 
 .buy > a{
     color: #1a1ae1;
-    padding-top: 20px;
+    margin-top: 15px;
     display: inline-block;
 }
 
@@ -356,6 +358,7 @@ main{
 /* Tool Rules */
 .tool{
     width: 100%;
+    margin-bottom: 120px;
 }
 
 .row{
@@ -382,50 +385,114 @@ main{
 
 /* Client Rules */
 .client{
-    /* DEBUG */
-    background-color: blueviolet;
-    width: 100%;
-    height: 150px;
+    width: 70%;
+    margin-bottom: 100px;
 }
 
+.client > h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.client > a{
+    color: #0061ff;
+    font-size: 12px;
+}
+
+/* Companies Rules */
 .companies{
     display: flex;
     justify-content: center;
-    /* DEBUG */
-    background-color: yellow;
-    height: 350px;
-    width: 100%;
+    height: 500px;
 }
 
-.comp-left, .comp-center, .comp-right{
+.comp-left, .comp-right{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-basis: 50%;
     height: 100%;
     flex-wrap: wrap;
-    /* DEBUG */
-    background-color: brown;
-    border: 3px solid black;
-
 }
 
-.comp-left div{
+.comp-left img, .comp-right img{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: invert(100%) sepia(22%) saturate(1623%) hue-rotate(170deg) brightness(130%) contrast(95%);
+}
+
+.comp-left div, .comp-right div{
     height: 50%;
-    flex-basis: 50%;
-    /* DEBUG */
-    background-color: aqua;
-    border: 2px solid black;
-}
-
-.comp-right div{
     height: 50%;
+    min-height: 50%;
     flex-basis: 50%;
-    /* DEBUG */
-    background-color: coral;
-    border: 2px solid black;
-
+    min-width: 50%;
+    max-width: 50%;
+    position: relative;
 }
+
+    /* Color Companies */
+    /* Left */
+    .comp-left div:nth-child(1){
+        background-color: #a2d39b;
+        border: 12px solid #d1e9cd;
+    }
+
+    .comp-left div:nth-child(2){
+        background-color: #61082b;
+    }
+
+    .comp-left div:nth-child(3){
+        background-color: #0093ce;
+    }
+
+    .comp-left div:nth-child(4){
+        background-color: #ff1c1c;
+    }
+
+    /* Right */
+    .comp-right div:nth-child(1){
+        background-color: #d5001f;
+    }
+
+    .comp-right div:nth-child(2){
+        background-color: #b4d0e7;
+    }
+
+    .comp-right div:nth-child(3){
+        background-color: #0d2481;
+    }
+
+    .comp-right div:nth-child(4){
+        background-color: #ffd830;
+    }
+
+.comp-center{
+    background-color: #f5f5f5;
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.comp-center  img{
+    width: 50%;
+}
+
+.line{
+    width: 20%;
+    padding-top: 30px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.comp-center > p{
+    margin: 40px 0;
+}
+
 
 .free-trial{
     /* DEBUG */
