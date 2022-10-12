@@ -680,10 +680,21 @@ main{
     display: inline-block;
 }
 
+.faq > div:hover .angle-1{
+    display: none;
+}
+
+.faq > div:hover .angle-2{
+    display: inline-block;
+}
 
 .answer > p{
     font-size: 12px;
     margin-bottom: 20px;
+}
+
+.angle-2{
+    display: none;
 }
 
 /* Footer Rules */
