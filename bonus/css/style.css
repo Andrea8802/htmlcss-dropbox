@@ -657,9 +657,6 @@ main{
 
 .faq > div{
     border-top: 1px solid gray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .faq > div:last-child{
@@ -669,6 +666,7 @@ main{
 .question{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 14px;
     font-weight: bold;
     margin: 30px 0;
@@ -678,7 +676,7 @@ main{
     display: none;
 }
 
-.question:hover .answer{
+.faq > div:hover .answer{
     display: inline-block;
 }
 
