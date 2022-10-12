@@ -100,7 +100,7 @@ nav li > span > a{
 .sub-menu{
     position: fixed;
     display: none;
-    z-index: 501;
+    z-index: 1;
     top: 65px;
     right: 250px;
     background-color: white;
@@ -111,8 +111,28 @@ nav li > span > a{
 }
 
 
+
+
 .support-menu:hover .sub-menu{
     display: inline-block;
+    animation: dropdown 1s ease 1;
+
+    
+}
+
+@keyframes dropdown{
+    0%{
+      opacity: 0;
+      top: 0px;  
+    }
+    100%{
+        opacity: 1;
+        top: 65px;
+    }
+}
+
+.support-menu:hover .sub-menu a{
+    border: 0px;
 }
 
 .sub-menu > ul{
