@@ -30,6 +30,10 @@ body{
     text-align: center;
 }
 
+.btn-blue:hover{
+    background-color: #297afe;
+}
+
 .section-title{
     font-size: 30px;
     font-weight: 700;
@@ -59,31 +63,43 @@ nav{
     right: 0px;
     left: 0px;
     background-color: white;
-    font-size: 15px;
+    font-size: 14px;
     z-index: 500;
 }
 
-header ul{
+nav ul{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
 }
 
-header img{
-    width: 85%;
+nav li > a:hover{
+    border-bottom: 2px solid black;
 }
 
-header li{
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 22px 0;
+}
+
+
+nav img{
+    width: 80%;
+}
+
+nav li{
     list-style: none;
 }
 
-header a{
+nav a{
     text-decoration: none;
     color: black;
+    padding: 22px 0;
 }
 
-header li > span > a{
+nav li > span > a{
     margin-left: 10px;
 }
 
@@ -125,6 +141,8 @@ header li > span > a{
     font-size: 40px;
     margin-top: 30%;
     display: inline-block;
+    color: black;
+    text-decoration: none;
 }
 
 #jum-right{
@@ -189,11 +207,11 @@ main{
     justify-content: space-evenly;
     gap: 30px;
     margin-bottom: 40px;
-    width: 100%;
 }
 
 .column{
     border: 1px solid lightgray;
+    width: calc(100% / 3 - 30px);
 }
 
 .col-head{
@@ -236,24 +254,35 @@ main{
 }
 
 .description > ul > li{
-    list-style: none;
-    padding: 7px 0;
     display: flex;
     justify-content: flex-start;
+    align-items: flex-start;    
+    list-style: none;
+    padding: 7px 0;
     gap: 3px;
     font-size: 13px;
 }
+
+.description > ul > li > i{
+    padding: 3px 3px 0 0;
+}
+
 .col-body .btn-blue{
-    margin-top: 40px;
     font-weight: 400;
     padding: 10px 30px;
     font-size: 11px;
+    width: 100%;
+    margin-top: 40px;
 }
 
 .buy > a{
     color: #1a1ae1;
     margin-top: 15px;
     display: inline-block;
+}
+
+.buy > a:hover{
+    color: purple;
 }
 
 .buy > span{
@@ -272,6 +301,7 @@ main{
 .highlights > ul > li{
     display: flex;
     justify-content: flex-start;
+    align-items: flex-start;
     gap: 2px;
     list-style: none;
     padding: 0 0 15px;
@@ -279,6 +309,7 @@ main{
 
 .highlights > ul > li > i{
     color: blue;
+    padding: 3px 3px 0 0;
 }
 
 .plan-enterprise{
@@ -335,6 +366,14 @@ main{
     text-decoration: none;
     color: black;
     background-color: white;
+}
+
+.btn-white:hover{
+    background-color: rgba(80, 80, 80, 0.2);
+    border: 2px solid rgba(80, 80, 80, 0.7);
+    font-weight: 500;
+    padding: 8px 8px;
+
 }
 
 .partner > img{
@@ -397,6 +436,10 @@ main{
 .client > a{
     color: #0061ff;
     font-size: 12px;
+}
+
+.client > a:hover{
+    color: purple;
 }
 
 /* Companies Rules */
@@ -516,6 +559,12 @@ main{
     font-size: 13px;
 }
 
+.free-trial > a:hover{
+    border: 1px solid black;
+    font-weight: 500;
+    padding: 8px 37px;
+}
+
 
 /* FAQ Rules */
 .faq{
@@ -568,15 +617,20 @@ footer a{
     height: 80%;
 }
 
+.footer-top a:hover{
+    text-decoration: underline;
+}
+
 .footer-top > div > ul{
     list-style: none;
 }
 
-.title > a{
-    font-size: 16px;
+.title > div{
+    font-size: 18px;
     font-weight: bold;
     display: inline-block;
     padding-bottom: 15px;
+    color: white;
 }
 
 .footer-top li{
@@ -600,8 +654,13 @@ footer a{
 .language > span{
     margin: 0 1px 0 5px; 
     display: inline-block;
+    cursor: pointer;
 }
 
 .language > i{
     font-size: 12px;
+}
+
+.language > i:last-child{
+    cursor: pointer;
 }
