@@ -49,6 +49,7 @@ body{
 header{
     min-height: 93vh;
     background-color: #b4d0e7;
+    position: relative;
 }
 
 nav{
@@ -75,15 +76,14 @@ nav ul{
 }
 
 nav li > a:hover{
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid black;
 }
 
 nav a{
     text-decoration: none;
     color: black;
-    padding: 22px 0;
+    padding: 20px 0;
 }
-
 
 nav img{
     width: 80%;
@@ -93,14 +93,55 @@ nav li{
     list-style: none;
 }
 
-nav a{
-    text-decoration: none;
-    color: black;
-    padding: 22px 0;
-}
-
 nav li > span > a{
     margin-left: 10px;
+}
+
+.sub-menu{
+    position: fixed;
+    display: none;
+    z-index: 501;
+    top: 65px;
+    right: 250px;
+    background-color: white;
+    padding: 15px 0;
+    width: 180px;
+    height: 130px;
+    font-size: 13px;
+}
+
+
+.support-menu:hover .sub-menu{
+    display: inline-block;
+}
+
+.sub-menu > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 13px;
+    width: 100%;
+    height: 100%;
+}
+
+.sub-menu > ul > li{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+} 
+
+.sub-menu > ul > li:hover{
+    background-color: #ececec;
+}
+
+.sub-menu a{
+    text-decoration: none;
+    color: black;
+    vertical-align: middle;
+    padding: 0 12px;
 }
 
 /* Jumbotron Rules */
@@ -145,6 +186,11 @@ nav li > span > a{
     text-decoration: none;
 }
 
+#jum-left > .arrow:hover{
+    color:rgba(80, 80, 80, 0.8)
+}
+
+
 #jum-right{
     width: 70%;
     height: 100%;
@@ -161,7 +207,6 @@ nav li > span > a{
 }
 
 /* Main Rules */
-
 main{
     max-width: 1600px;
     margin: 0 auto;
