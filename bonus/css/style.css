@@ -98,37 +98,25 @@ nav li > span > a{
 }
 
 .sub-menu{
-    position: fixed;
-    display: none;
-    z-index: 1;
-    top: 65px;
+    border-width: 0px 1px 1px 1px;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    position: absolute;
+    top: 0px;
+    z-index: -1;
     right: 250px;
-    background-color: white;
     padding: 15px 0;
     width: 180px;
     height: 130px;
     font-size: 13px;
+    opacity: 0;
+    transition: all 0.5s ease;
 }
-
-
-
 
 .support-menu:hover .sub-menu{
-    display: inline-block;
-    animation: dropdown 1s ease 1;
-
-    
-}
-
-@keyframes dropdown{
-    0%{
-      opacity: 0;
-      top: 0px;  
-    }
-    100%{
-        opacity: 1;
-        top: 65px;
-    }
+    background-color: white;
+    opacity: 1;
+    top: 65px;
 }
 
 .support-menu:hover .sub-menu a{
@@ -168,14 +156,14 @@ nav li > span > a{
 .jumbotron{
     padding-top: 65px;
     height: 100%;
-    max-width: 1600px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
 .jumbotron > h2{
     margin: 60px 0 30px 0;
     font-size: 60px;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .jum-content{
@@ -228,7 +216,7 @@ nav li > span > a{
 
 /* Main Rules */
 main{
-    max-width: 1600px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
@@ -465,8 +453,6 @@ main{
     font-size: 13px;
 }
 
-
-/* Tool Rules */
 .tool{
     width: 100%;
     margin-bottom: 120px;
@@ -492,11 +478,11 @@ main{
     font-size: 13px;
     margin-top: 20px;
     font-weight: lighter;
+    text-align: justify;
 }
 
 /* Client Rules */
 .client{
-    width: 70%;
     margin-bottom: 100px;
 }
 
@@ -581,8 +567,7 @@ main{
     }
 
 .comp-left > *:hover, .comp-right > *:hover{
-    border: 12px solid #d1e9cd;
-    
+    border: 12px solid #d1e9cd; 
 }
 
 .comp-center{
@@ -657,10 +642,17 @@ main{
 
 .faq > div{
     border-top: 1px solid gray;
+    position: relative;
+    height: 80px;
+    transition: height 0.5s ease;
 }
 
 .faq > div:last-child{
     border-bottom: 1px solid gray;
+}
+
+.faq > div:hover{
+    height: 140px;
 }
 
 .question{
@@ -670,31 +662,31 @@ main{
     font-size: 14px;
     font-weight: bold;
     margin: 30px 0;
+    cursor: pointer;
 }
 
-.answer{
-    display: none;
+.angle > i{
+    transition: transform 0.5s ease;
+    cursor: pointer;
 }
 
-.faq > div:hover .answer{
-    display: inline-block;
-}
-
-.faq > div:hover .angle-1{
-    display: none;
-}
-
-.faq > div:hover .angle-2{
-    display: inline-block;
+.faq > div:hover .angle > i{
+    transform: rotate(180deg);
 }
 
 .answer > p{
     font-size: 12px;
     margin-bottom: 20px;
+    top: 30px;
+    position: absolute;
+    transition: all 0.5s ease;
+    opacity: 0%;
 }
 
-.angle-2{
-    display: none;
+
+.faq > div:hover .answer > p{
+    opacity: 100%;
+    top: 80px;
 }
 
 /* Footer Rules */

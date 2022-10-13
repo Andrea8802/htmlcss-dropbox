@@ -49,6 +49,7 @@ body{
 header{
     min-height: 93vh;
     background-color: #b4d0e7;
+    position: relative;
 }
 
 nav{
@@ -75,15 +76,14 @@ nav ul{
 }
 
 nav li > a:hover{
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid black;
 }
 
 nav a{
     text-decoration: none;
     color: black;
-    padding: 22px 0;
+    padding: 20px 0;
 }
-
 
 nav img{
     width: 80%;
@@ -93,28 +93,84 @@ nav li{
     list-style: none;
 }
 
-nav a{
-    text-decoration: none;
-    color: black;
-    padding: 22px 0;
-}
-
 nav li > span > a{
     margin-left: 10px;
+}
+
+.sub-menu{
+    position: absolute;
+    display: none;
+    z-index: -1;
+    top: 65px;
+    right: 250px;
+    padding: 15px 0;
+    width: 180px;
+    height: 130px;
+    font-size: 13px;
+}
+
+.support-menu:hover .sub-menu{
+    display: inline-block;
+    animation: dropdown 0.5s ease 1;
+    background-color: white;
+}
+
+@keyframes dropdown{
+    0%{
+        opacity: 0;
+        top: 0px;  
+    }
+    100%{
+        opacity: 1;
+        top: 65px;
+    }
+}
+
+.support-menu:hover .sub-menu a{
+    border: 0px;
+}
+
+.sub-menu > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 13px;
+    width: 100%;
+    height: 100%;
+}
+
+.sub-menu > ul > li{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+} 
+
+.sub-menu > ul > li:hover{
+    background-color: #ececec;
+}
+
+.sub-menu a{
+    text-decoration: none;
+    color: black;
+    vertical-align: middle;
+    padding: 0 12px;
 }
 
 /* Jumbotron Rules */
 .jumbotron{
     padding-top: 65px;
     height: 100%;
-    max-width: 1600px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
 .jumbotron > h2{
     margin: 60px 0 30px 0;
     font-size: 60px;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .jum-content{
@@ -145,6 +201,11 @@ nav li > span > a{
     text-decoration: none;
 }
 
+#jum-left > .arrow:hover{
+    color:rgba(80, 80, 80, 0.8)
+}
+
+
 #jum-right{
     width: 70%;
     height: 100%;
@@ -161,9 +222,8 @@ nav li > span > a{
 }
 
 /* Main Rules */
-
 main{
-    max-width: 1600px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
@@ -199,7 +259,6 @@ main{
         background-color: white;
         border: 1px solid grey;
     }
-
 
 /* Plan Rules */
 .type-plan{
@@ -256,7 +315,7 @@ main{
 .description > ul > li{
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;    
+    align-items: flex-start;
     list-style: none;
     padding: 7px 0;
     gap: 3px;
@@ -393,8 +452,6 @@ main{
     font-size: 13px;
 }
 
-
-/* Tool Rules */
 .tool{
     width: 100%;
     margin-bottom: 120px;
@@ -420,11 +477,11 @@ main{
     font-size: 13px;
     margin-top: 20px;
     font-weight: lighter;
+    text-align: justify;
 }
 
 /* Client Rules */
 .client{
-    width: 70%;
     margin-bottom: 100px;
 }
 
@@ -477,9 +534,13 @@ main{
     /* Left */
     .comp-left div:nth-child(1){
         background-color: #a2d39b;
-        border: 12px solid #d1e9cd;
+        border: 12px solid #d1e9cd; 
     }
 
+    .comp-left div:nth-child(1) > img{
+        width: 55%;
+}
+    
     .comp-left div:nth-child(2){
         background-color: #61082b;
     }
@@ -521,6 +582,9 @@ main{
 
 .comp-center  img{
     width: 50%;
+}
+.image-cent-b{
+    display: none;
 }
 
 .line{
@@ -568,33 +632,29 @@ main{
 
 /* FAQ Rules */
 .faq{
-    height: 400px;
+    height: 600px;
     margin-bottom: 50px;
 }
 
 .faq > h2{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .faq > div{
     border-top: 1px solid gray;
-    height: 20%;
-    width: 100%;
-    font-size: 13px;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .faq > div:last-child{
     border-bottom: 1px solid gray;
 }
 
-.faq > div > i{
-    padding-right: 40px;
-    font-size: 10px;
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
     font-weight: bold;
+    margin: 30px 0;
 }
 
 /* Footer Rules */
