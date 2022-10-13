@@ -205,13 +205,10 @@ nav li > span > a{
     position: relative;
 }
 
-.jum-content > #jum-right > img{
-    max-width: 110%;
-    min-width: 110%;
+#jum-right > img{
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    max-width: 100%;
+    top: 30px;
 }
 
 /* Main Rules */
